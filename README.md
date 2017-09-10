@@ -21,9 +21,9 @@ networks research.  The system is general enough to be applicable in a wide
 variety of other domains, as well.
 
 
-## Installation and Setup
-Step 1:-
-Audience 1 - Students without a local machine with GPU
+### Installation and Setup
+## Step 1:-
+# Audience 1 - Students without a local machine with GPU
 Acquire the machine:-
 Different sources can be 
 a) Google Cloud
@@ -60,12 +60,13 @@ c.	Add certain details here:-
 d.Click on ssh to enter into the machine and new browser will open from where you will enter into the terminal of the machine
 
 
-Audience 2 - Students with a local machine with GPU on it.
+# Audience 2 - Students with a local machine with GPU on it.
 Machine can be Linux, Mac or Windows
 They should directly move to setting up docker as per the respective machine environment
 
 
-Now steps for all audience:-
+
+## Step 2
 Setup Docker irrespective of whether you are running setting up environment on local or cloud machine
 a) Windows
 
@@ -74,6 +75,27 @@ b) OS X
 c) Linux
 
 
+## Step 3
+Create a volume to enable persistence so that even after shutting down the system, work is saved
+```
+sudo docker volume create vol_tf
+```
+Here volume created is *vol_tf*
+Refer https://docs.docker.com/engine/reference/commandline/volume/ for better understanding
+
+
+Pull the docker image and start the container with all the environment completely setup
+```
+sudo docker run -it -p 8888:8888 -p 6006:6006 -v test_vol:/notebooks tensorflow/tensorflow:latest-py3
+```
+Explanation on the command
+1. Docker command is pulling image tagged as "tensorflow:latest-py3" on tensorflow repository on dockerhub
+2. The argument with -v says thats test_vol on the host machine should be mounted to the /notebooks directory inside the container
+3. 
+Refer https://docs.docker.com/engine/reference/run/ for more details
+
+
+## Step 4
 Try your first TensorFlow program
 $ python3
 
@@ -87,5 +109,10 @@ $ python3
 >>> sess.run(a + b)
 42
 >>> sess.close()
+
+## Step 5
+Open a browser
+Go to http:<ip-address>:8888 and you should be able to open Jupyter Notebook environment in the browser
+Go to http:<ip-address>:6006 and you should be able to open Tensorboard environment in the browser
 
 
