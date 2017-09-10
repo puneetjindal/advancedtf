@@ -67,13 +67,53 @@ They should directly move to setting up docker as per the respective machine env
 
 
 ## Step 2
+Setup Docker engine
+
+Docker is the world’s leading software container platform. Developers use Docker to eliminate “works on my machine” problems when collaborating on code with co-workers. Operators use Docker to run and manage apps side-by-side in isolated containers to get better compute density. Enterprises use Docker to build agile software delivery pipelines to ship new features faster, more securely and with confidence for both Linux, Windows Server, and Linux-on-mainframe apps.
+
+To get to know about the basic concepts on docker visit https://docs.docker.com/engine/docker-overview/
+
 Setup Docker irrespective of whether you are running setting up environment on local or cloud machine
 a) Windows
 
 b) OS X
 
 c) Linux
+https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
 
+```
+sudo apt-get remove docker docker-engine docker.io
+```
+
+Update the apt package index:
+```
+sudo apt-get update
+```
+
+```
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+```
+
+```
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+```
+
+```
+sudo apt-key fingerprint 0EBFCD88
+```
+
+```
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+```
+
+```
+sudo apt-get update
+```
+
+```
+sudo apt-get install docker-ce
+```
 
 ## Step 3
 Create a volume to enable persistence so that even after shutting down the system, work is saved
