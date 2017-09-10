@@ -1,2 +1,91 @@
 # advancedtf
 Advanced TensorFlow
+
+<div align="center">
+  <img src="https://www.tensorflow.org/images/tf_logo_transp.png"><br><br>
+</div>
+
+**TensorFlow** is an open source software library for numerical computation using
+data flow graphs.  The graph nodes represent mathematical operations, while
+the graph edges represent the multidimensional data arrays (tensors) that flow
+between them.  This flexible architecture lets you deploy computation to one
+or more CPUs or GPUs in a desktop, server, or mobile device without rewriting
+code.  TensorFlow also includes TensorBoard, a data visualization toolkit.
+
+https://www.tensorflow.org/
+
+TensorFlow was originally developed by researchers and engineers
+working on the Google Brain team within Google's Machine Intelligence Research
+organization for the purposes of conducting machine learning and deep neural
+networks research.  The system is general enough to be applicable in a wide
+variety of other domains, as well.
+
+
+## Installation and Setup
+Step 1:-
+Audience 1 - Students without a local machine with GPU
+Acquire the machine:-
+Different sources can be 
+a) Google Cloud
+b) Microsoft Azure Cloud
+c) AWS Cloud
+d) Any third party Infrastructure as a service provider
+
+a)
+Installation steps on Google Cloud
+Go to https://cloud.google.com/ and register your account
+Recommended:- Try to use Google free tier for first few videos https://cloud.google.com/free/
+
+Now to setup a machine, follow the quick start to setup either a Linux or Windows VM. Throughout the Sections, i shall be doing it with a machine booted with Linux 16.04 LTS
+https://cloud.google.com/compute/docs/
+
+Also on google cloud to launch a machine with gpu it might be that you may have to open a support request to increase your quota of gpu in a particular region. 
+https://console.cloud.google.com/iam-admin/quotas
+
+
+Also, you can always check the following link around which regions have gpus
+https://cloud.google.com/compute/docs/gpus/
+
+Now we move forward creating a cloud machine on Google cloud platform
+a.	Go to link https://console.cloud.google.com/compute
+b.	Click on create instance
+c.	Add certain details here:-
+	a.	Name your instance (eg tfgpu)
+	b.	Choose region where gpu support is available assuming quota request is already raised
+	c.	Customize machine type (For current section we don’t need heavy machine so we can just choose 2 vCPUs and minimal 6 – 8 GBRAM )
+	d.	To configure machine with GPU click on customize
+	e.	Select a 50 gb standard persistent disk
+	f.	Click save and it might take few seconds to get the machine up and running
+
+d.Click on ssh to enter into the machine and new browser will open from where you will enter into the terminal of the machine
+
+
+Audience 2 - Students with a local machine with GPU on it.
+Machine can be Linux, Mac or Windows
+They should directly move to setting up docker as per the respective machine environment
+
+
+Now steps for all audience:-
+Setup Docker irrespective of whether you are running setting up environment on local or cloud machine
+a) Windows
+
+b) OS X
+
+c) Linux
+
+
+Try your first TensorFlow program
+$ python3
+
+>>> import tensorflow as tf
+>>> hello = tf.constant('Hello, TensorFlow!')
+>>> sess = tf.Session()
+>>> sess.run(hello)
+'Hello, TensorFlow!'
+>>> a = tf.constant(10)
+>>> b = tf.constant(32)
+>>> sess.run(a + b)
+42
+>>> sess.close()
+
+
