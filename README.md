@@ -60,14 +60,63 @@ c.	Add certain details here:-
 d.Click on ssh to enter into the machine and new browser will open from where you will enter into the terminal of the machine
 
 
+## gpu specific installation
+Benefits of GPU containerization 
+https://github.com/NVIDIA/nvidia-docker/wiki/Motivation
+
+sudo apt install nvidia-modprobe
+sudo service nvidia-docker start
+https://cloud.google.com/compute/docs/gpus/add-gpus#install-driver-script
+
+
+b) if you prefer Microsoft Azure cloud
+Installation steps on Microsoft Azure Cloud
+
+Register on Azure cloud by https://portal.azure.com/ where you have to go through their signup process and you will get some initial credits as per terms of conditions. Please check before entering any credit card information.
+
+After this go to https://docs.microsoft.com/en-us/azure/virtual-machines/ based on Operating system you are comfortable with
+
+Go to 
+https://azure.microsoft.com/en-in/free/
+Signup for N-series GPU machine as per your convenience
+
+Following are some helpful links
+a) Follow the below link till connecting to VM with SSH
+https://blogs.msdn.microsoft.com/uk_faculty_connection/2017/03/27/azure-gpu-tensorflow-step-by-step-setup/
+
+b)Follow this link to complete GPU driver installation on the machine till  Install nvidia-docker
+https://kampta.github.io/Azure-GPU-VM-Getting-Started/
+
+or follow the links here
+https://github.com/NVIDIA/nvidia-docker/wiki/Deploy-on-Azure
+
+
+3)If you prefer AWS cloud
+Follow instructions from here
+https://docs.docker.com/machine/examples/aws/
+
+Step 1. Sign up for AWS and configure credentials
+
+Step 2. Use Machine to create the instance
+
+Step 3. Run Docker commands on the instance
+
+or 
+Follow the below nicely explained link till "Setup nvidia-docker"
+https://medium.com/towards-data-science/how-to-set-up-deep-learning-machine-on-aws-gpu-instance-3bb18b0a2579
+
+
+
 # Audience 2 - Students with a local machine with GPU on it.
 Machine can be Linux, Mac or Windows
 They should directly move to setting up docker as per the respective machine environment
 
 
 
+
+
 ## Step 2
-Setup Docker engine
+Setup Docker engine if you still doesn't have docker setup on your machine.
 
 Docker is the world’s leading software container platform. Developers use Docker to eliminate “works on my machine” problems when collaborating on code with co-workers. Operators use Docker to run and manage apps side-by-side in isolated containers to get better compute density. Enterprises use Docker to build agile software delivery pipelines to ship new features faster, more securely and with confidence for both Linux, Windows Server, and Linux-on-mainframe apps.
 
