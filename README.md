@@ -39,14 +39,15 @@ variety of other domains, as well.
 
 * Now, setup a machine, follow the quick start to setup either a Linux(preferable) or Windows VM. 
 
-Throughout the Sections, i shall be doing it with a machine booted with Linux 16.04 LTS
+Throughout the Sections, I shall be doing it with a machine booted with Linux 16.04 LTS
 https://cloud.google.com/compute/docs/
 
 You may have to open a support request to increase your quota of gpu in a particular region on google cloud before launching a machine with gpu.
 *Click here https://console.cloud.google.com/iam-admin/quotas*
 
 Also, you can always check the following link around which regions have gpus
-*Click here to https://cloud.google.com/compute/docs/gpus/*
+
+*Click here https://cloud.google.com/compute/docs/gpus/*
 
 * Now we move forward creating a cloud machine on Google cloud platform
 * a.	Go to link https://console.cloud.google.com/compute
@@ -92,7 +93,8 @@ Signup for N-series GPU machine as per your convenience
 
 * b)Follow this link to complete GPU driver installation on the machine till  Install nvidia-docker
 *https://kampta.github.io/Azure-GPU-VM-Getting-Started/*
-or 
+
+**or**
 
 Follow the links here
 https://github.com/NVIDIA/nvidia-docker/wiki/Deploy-on-Azure*
@@ -109,6 +111,7 @@ https://github.com/NVIDIA/nvidia-docker/wiki/Deploy-on-Azure*
 * Step 3. Run Docker commands on the instance
 
 or 
+
 *Follow the below nicely explained link till "Setup nvidia-docker"
 https://medium.com/towards-data-science/how-to-set-up-deep-learning-machine-on-aws-gpu-instance-3bb18b0a2579*
 
