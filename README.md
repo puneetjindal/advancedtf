@@ -62,7 +62,7 @@ Also, you can always check the following link around which regions have gpus
 * d.Click on ssh to enter into the machine and new browser will open from where you will enter into the terminal of the machine
 
 
-# GPU specific installation
+#### *GPU specific installation*
 **Benefits of GPU containerization**
 *https://github.com/NVIDIA/nvidia-docker/wiki/Motivation*
 
