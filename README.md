@@ -2,7 +2,7 @@
 Advanced TensorFlow
 
 <div align="center">
-  <img src="https://www.tensorflow.org/images/tf_logo_transp.png"><br><br>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg"><br><br>
 </div>
 
 **TensorFlow** is an open source software library for numerical computation using
