@@ -52,41 +52,49 @@ Also, you can always check the following link around which regions have gpus
 * a.	Go to link https://console.cloud.google.com/compute
 * b.	Click on create instance
 * c.	Add certain details here:-
-	a.	Name your instance (eg tfgpu)
-	b.	Choose region where gpu support is available assuming quota request is already raised
-	c.	Customize machine type (For current section we don’t need heavy machine so we can just choose 2 vCPUs and minimal 6 – 8 GBRAM )
-	d.	To configure machine with GPU click on customize
-	e.	Select a 50 gb standard persistent disk
-	f.	Click save and it might take few seconds to get the machine up and running
+	* a.	Name your instance (eg tfgpu)
+	* b.	Choose region where gpu support is available assuming quota request is already raised
+	* c.	Customize machine type (For current section we don’t need heavy machine so we can just choose 2 vCPUs and minimal 6 – 8 GBRAM )
+	* d.	To configure machine with GPU click on customize
+	* e.	Select a 50 gb standard persistent disk
+	* f.	Click save and it might take few seconds to get the machine up and running
 
 * d.Click on ssh to enter into the machine and new browser will open from where you will enter into the terminal of the machine
 
 
 # GPU specific installation
 **Benefits of GPU containerization**
-https://github.com/NVIDIA/nvidia-docker/wiki/Motivation
+*https://github.com/NVIDIA/nvidia-docker/wiki/Motivation*
 
+```
 sudo apt install nvidia-modprobe
+```
+```
 sudo service nvidia-docker start
-https://cloud.google.com/compute/docs/gpus/add-gpus#install-driver-script
+```
+*https://cloud.google.com/compute/docs/gpus/add-gpus#install-driver-script*
 
 
 **b)Installation steps on Microsoft Azure Cloud**
 
 * Register on Azure cloud by https://portal.azure.com/ where you have to go through their signup process and you will get some initial credits as per terms of conditions. Please check before entering any credit card information.
 
-* After this go to https://docs.microsoft.com/en-us/azure/virtual-machines/ based on Operating system you are comfortable with
+* After this go to https://docs.microsoft.com/en-us/azure/virtual-machines/ based on Operating system(prefer Linux Ubuntu 16.04 LTS) you are comfortable with
 
-Go to 
-https://azure.microsoft.com/en-in/free/
+Go to https://azure.microsoft.com/en-in/free/
+
 Signup for N-series GPU machine as per your convenience
 
-*Following are some helpful links
-a) Follow the below link till connecting to VM with SSH
-https://blogs.msdn.microsoft.com/uk_faculty_connection/2017/03/27/azure-gpu-tensorflow-step-by-step-setup/
-b)Follow this link to complete GPU driver installation on the machine till  Install nvidia-docker
-https://kampta.github.io/Azure-GPU-VM-Getting-Started/
-or follow the links here
+**Following are some helpful links**
+
+* a) Follow the below link till connecting to VM with SSH
+*https://blogs.msdn.microsoft.com/uk_faculty_connection/2017/03/27/azure-gpu-tensorflow-step-by-step-setup/*
+
+* b)Follow this link to complete GPU driver installation on the machine till  Install nvidia-docker
+*https://kampta.github.io/Azure-GPU-VM-Getting-Started/*
+or 
+
+Follow the links here
 https://github.com/NVIDIA/nvidia-docker/wiki/Deploy-on-Azure*
 
 
