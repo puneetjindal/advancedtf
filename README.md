@@ -119,7 +119,7 @@ https://medium.com/towards-data-science/how-to-set-up-deep-learning-machine-on-a
 
 **Audience 2 - Students with a local machine with GPU on it.**
 * Machine can be Linux, Mac or Windows
-*They should directly move to setting up docker as per the respective machine environment*
+*They should directly move to Step 2 i.e. setting up docker as per the respective machine environment*
 
 
 
@@ -136,8 +136,11 @@ a) Windows
 b) OS X
 
 c) Linux
-https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions
-https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
+
+*https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions
+https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04*
+
+* Steps for setting up on Ubuntu 16.04 LTS machine on cloud
 
 ```
 sudo apt-get remove docker docker-engine docker.io
@@ -172,12 +175,16 @@ sudo apt-get update
 sudo apt-get install docker-ce
 ```
 
+
+
+
 ## Step 3
 Create a volume to enable persistence so that even after shutting down the system, work is saved
 ```
 sudo docker volume create vol_tf
 ```
 Here volume created is *vol_tf*
+
 Refer https://docs.docker.com/engine/reference/commandline/volume/ for better understanding
 
 
@@ -185,15 +192,15 @@ Pull the docker image and start the container with all the environment completel
 ```
 sudo docker run -it -p 8888:8888 -p 6006:6006 -v test_vol:/notebooks tensorflow/tensorflow:latest-py3
 ```
-Explanation on the command
-1. Docker command is pulling image tagged as "tensorflow:latest-py3" on tensorflow repository on dockerhub
-2. The argument with -v says thats test_vol on the host machine should be mounted to the /notebooks directory inside the container
-3. 
-Refer https://docs.docker.com/engine/reference/run/ for more details
+
+**Explanation on the command**
+* 1. Docker command is pulling image tagged as "tensorflow:latest-py3" on tensorflow repository on dockerhub
+* 2. The argument with -v says thats test_vol on the host machine should be mounted to the /notebooks directory inside the container
+* 3. Refer https://docs.docker.com/engine/reference/run/ for more details
 
 
 ## Step 4
-Try your first TensorFlow program
+**Try your first TensorFlow program**
 $ python3
 
 >>> import tensorflow as tf
@@ -208,8 +215,19 @@ $ python3
 >>> sess.close()
 
 ## Step 5
-Open a browser
-Go to http:<ip-address>:8888 and you should be able to open Jupyter Notebook environment in the browser
-Go to http:<ip-address>:6006 and you should be able to open Tensorboard environment in the browser
+**Test the environment**
+* Open a browser
+* Go to http:<ip-address>:8888 and you should be able to open Jupyter Notebook environment in the browser
+* Go to http:<ip-address>:6006 and you should be able to open Tensorboard environment in the browser
 
+
+## For more information
+
+* [TensorFlow website](https://www.tensorflow.org)
+* [TensorFlow White Papers](https://www.tensorflow.org/about/bib)
+* [TensorFlow Model Zoo](https://github.com/tensorflow/models)
+* [TensorFlow MOOC on Udacity](https://www.udacity.com/course/deep-learning--ud730)
+* [TensorFlow course at Stanford](https://web.stanford.edu/class/cs20si)
+
+Learn more about the TensorFlow community at the [community page of tensorflow.org](https://www.tensorflow.org/community) for a few ways to participate.
 
