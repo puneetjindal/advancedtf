@@ -1,6 +1,6 @@
-# advancedtf
-Advanced TensorFlow
+# Advanced TensorFlow
 
+TensorFlow
 <div align="center">
   <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Tensorflow_logo.svg"><br><br>
 </div>
