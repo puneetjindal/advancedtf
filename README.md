@@ -130,17 +130,18 @@ Docker is the world’s leading software container platform. Developers use Dock
 
 To get to know about the basic concepts on docker visit https://docs.docker.com/engine/docker-overview/
 
-Setup Docker irrespective of whether you are running setting up environment on local or cloud machine
-a) Windows
+**Setup Docker irrespective of whether you are running setting up environment on local or cloud machine**
 
-b) OS X
+* a) Windows
 
-c) Linux
+* b) OS X
+
+* c) Linux
 
 *https://docs.docker.com/engine/installation/linux/docker-ce/ubuntu/#uninstall-old-versions
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04*
 
-* Steps for setting up on Ubuntu 16.04 LTS machine on cloud
+Steps for setting up docker on Ubuntu 16.04 LTS machine on cloud
 
 ```
 sudo apt-get remove docker docker-engine docker.io
