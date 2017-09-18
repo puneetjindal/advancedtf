@@ -42,8 +42,8 @@ variety of other domains, as well.
 Throughout the Sections, i shall be doing it with a machine booted with Linux 16.04 LTS
 https://cloud.google.com/compute/docs/
 
-Also you may have to open a support request to increase your quota of gpu in a particular region on google cloud before launching a machine with gpu.
-Click here https://console.cloud.google.com/iam-admin/quotas
+You may have to open a support request to increase your quota of gpu in a particular region on google cloud before launching a machine with gpu.
+*Click here https://console.cloud.google.com/iam-admin/quotas*
 
 Also, you can always check the following link around which regions have gpus
 *Click here to https://cloud.google.com/compute/docs/gpus/*
