@@ -23,7 +23,7 @@ variety of other domains, as well.
 
 # Installation and Setup
 
-## Step 1:-
+## **Step 1:-**
 
 **Audience 1 - Cloud Installation**
 **Different sources can be**
