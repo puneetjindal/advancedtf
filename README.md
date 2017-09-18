@@ -21,35 +21,37 @@ networks research.  The system is general enough to be applicable in a wide
 variety of other domains, as well.
 
 
-### Installation and Setup
+# Installation and Setup
+
 ## Step 1:-
-# Audience 1 - Students without a local machine with GPU
-Acquire the machine:-
-Different sources can be 
-a) Google Cloud
-b) Microsoft Azure Cloud
-c) AWS Cloud
-d) Any third party Infrastructure as a service provider
 
-a)
-Installation steps on Google Cloud
-Go to https://cloud.google.com/ and register your account
-Recommended:- Try to use Google free tier for first few videos https://cloud.google.com/free/
+**Audience 1 - Cloud Installation**
+**Different sources can be**
+* a) Google Cloud
+* b) Microsoft Azure Cloud
+* c) AWS Cloud
+* d) Any third party Infrastructure as a service provider e.g. Digital Ocean e.t.c.
 
-Now to setup a machine, follow the quick start to setup either a Linux or Windows VM. Throughout the Sections, i shall be doing it with a machine booted with Linux 16.04 LTS
+**a)Installation steps on Google Cloud**
+* Go to https://cloud.google.com/ and register your account
+
+*Recommended:- Try to use Google free tier for first few videos https://cloud.google.com/free/*
+
+* Now, setup a machine, follow the quick start to setup either a Linux(preferable) or Windows VM. 
+
+Throughout the Sections, i shall be doing it with a machine booted with Linux 16.04 LTS
 https://cloud.google.com/compute/docs/
 
-Also on google cloud to launch a machine with gpu it might be that you may have to open a support request to increase your quota of gpu in a particular region. 
-https://console.cloud.google.com/iam-admin/quotas
-
+Also you may have to open a support request to increase your quota of gpu in a particular region on google cloud before launching a machine with gpu.
+Click here https://console.cloud.google.com/iam-admin/quotas
 
 Also, you can always check the following link around which regions have gpus
-https://cloud.google.com/compute/docs/gpus/
+*Click here to https://cloud.google.com/compute/docs/gpus/*
 
-Now we move forward creating a cloud machine on Google cloud platform
-a.	Go to link https://console.cloud.google.com/compute
-b.	Click on create instance
-c.	Add certain details here:-
+* Now we move forward creating a cloud machine on Google cloud platform
+* a.	Go to link https://console.cloud.google.com/compute
+* b.	Click on create instance
+* c.	Add certain details here:-
 	a.	Name your instance (eg tfgpu)
 	b.	Choose region where gpu support is available assuming quota request is already raised
 	c.	Customize machine type (For current section we don’t need heavy machine so we can just choose 2 vCPUs and minimal 6 – 8 GBRAM )
@@ -57,11 +59,11 @@ c.	Add certain details here:-
 	e.	Select a 50 gb standard persistent disk
 	f.	Click save and it might take few seconds to get the machine up and running
 
-d.Click on ssh to enter into the machine and new browser will open from where you will enter into the terminal of the machine
+* d.Click on ssh to enter into the machine and new browser will open from where you will enter into the terminal of the machine
 
 
-## gpu specific installation
-Benefits of GPU containerization 
+# GPU specific installation
+**Benefits of GPU containerization**
 https://github.com/NVIDIA/nvidia-docker/wiki/Motivation
 
 sudo apt install nvidia-modprobe
@@ -69,49 +71,44 @@ sudo service nvidia-docker start
 https://cloud.google.com/compute/docs/gpus/add-gpus#install-driver-script
 
 
-b) if you prefer Microsoft Azure cloud
-Installation steps on Microsoft Azure Cloud
+**b)Installation steps on Microsoft Azure Cloud**
 
-Register on Azure cloud by https://portal.azure.com/ where you have to go through their signup process and you will get some initial credits as per terms of conditions. Please check before entering any credit card information.
+* Register on Azure cloud by https://portal.azure.com/ where you have to go through their signup process and you will get some initial credits as per terms of conditions. Please check before entering any credit card information.
 
-After this go to https://docs.microsoft.com/en-us/azure/virtual-machines/ based on Operating system you are comfortable with
+* After this go to https://docs.microsoft.com/en-us/azure/virtual-machines/ based on Operating system you are comfortable with
 
 Go to 
 https://azure.microsoft.com/en-in/free/
 Signup for N-series GPU machine as per your convenience
 
-Following are some helpful links
+*Following are some helpful links
 a) Follow the below link till connecting to VM with SSH
 https://blogs.msdn.microsoft.com/uk_faculty_connection/2017/03/27/azure-gpu-tensorflow-step-by-step-setup/
-
 b)Follow this link to complete GPU driver installation on the machine till  Install nvidia-docker
 https://kampta.github.io/Azure-GPU-VM-Getting-Started/
-
 or follow the links here
-https://github.com/NVIDIA/nvidia-docker/wiki/Deploy-on-Azure
+https://github.com/NVIDIA/nvidia-docker/wiki/Deploy-on-Azure*
 
 
-3)If you prefer AWS cloud
-Follow instructions from here
-https://docs.docker.com/machine/examples/aws/
+**3)Installation steps on AWS cloud**
 
-Step 1. Sign up for AWS and configure credentials
+*https://docs.docker.com/machine/examples/aws/*
 
-Step 2. Use Machine to create the instance
+* Step 1. Sign up for AWS and configure credentials
 
-Step 3. Run Docker commands on the instance
+* Step 2. Use Machine to create the instance
+
+* Step 3. Run Docker commands on the instance
 
 or 
-Follow the below nicely explained link till "Setup nvidia-docker"
-https://medium.com/towards-data-science/how-to-set-up-deep-learning-machine-on-aws-gpu-instance-3bb18b0a2579
+*Follow the below nicely explained link till "Setup nvidia-docker"
+https://medium.com/towards-data-science/how-to-set-up-deep-learning-machine-on-aws-gpu-instance-3bb18b0a2579*
 
 
 
-# Audience 2 - Students with a local machine with GPU on it.
-Machine can be Linux, Mac or Windows
-They should directly move to setting up docker as per the respective machine environment
-
-
+**Audience 2 - Students with a local machine with GPU on it.**
+* Machine can be Linux, Mac or Windows
+*They should directly move to setting up docker as per the respective machine environment*
 
 
 
