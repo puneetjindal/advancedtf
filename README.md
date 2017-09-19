@@ -184,14 +184,40 @@ Create a volume to enable persistence so that even after shutting down the syste
 ```
 sudo docker volume create vol_tf
 ```
+
+```
+sudo docker volume ls
+```
+
 Here volume created is *vol_tf*
 
 Refer https://docs.docker.com/engine/reference/commandline/volume/ for better understanding
 
 
 Pull the docker image and start the container with all the environment completely setup
+
+CPU only image
 ```
-sudo docker run -it -p 8888:8888 -p 6006:6006 -v test_vol:/notebooks tensorflow/tensorflow:latest-py3
+sudo docker run -it -p 8888:8888 -p 6006:6006 -v vol_tf:/notebooks tensorflow/tensorflow:latest-py3
+```
+
+GPU only image
+```
+sudo docker run -it -p 8888:8888 -p 6006:6006 -v vol_tf:/notebooks tensorflow/tensorflow:latest-gpu-py3
+```
+
+
+Open a new SSH connection to the instance
+```
+sudo docker ps
+```
+
+```
+sudo docker exec -it <yourcontainer-id> /bin/bash
+```
+
+```
+tensorboard --logdir=notebooks/
 ```
 
 **Explanation on the command**
@@ -204,22 +230,22 @@ sudo docker run -it -p 8888:8888 -p 6006:6006 -v test_vol:/notebooks tensorflow/
 **Try your first TensorFlow program**
 $ python3
 
->>> import tensorflow as tf
->>> hello = tf.constant('Hello, TensorFlow!')
->>> sess = tf.Session()
->>> sess.run(hello)
+* >>> import tensorflow as tf
+* >>> hello = tf.constant('Hello, TensorFlow!')
+* >>> sess = tf.Session()
+* >>> sess.run(hello)
 'Hello, TensorFlow!'
->>> a = tf.constant(10)
->>> b = tf.constant(32)
->>> sess.run(a + b)
+* >>> a = tf.constant(10)
+* >>> b = tf.constant(32)
+* >>> sess.run(a + b)
 42
->>> sess.close()
+* >>> sess.close()
 
 ## Step 5
 **Test the environment**
 * Open a browser
-* Go to http:<ip-address>:8888 and you should be able to open Jupyter Notebook environment in the browser
-* Go to http:<ip-address>:6006 and you should be able to open Tensorboard environment in the browser
+* Go to http:ip-address:8888 and you should be able to open Jupyter Notebook environment in the browser
+* Go to http:ip-address:6006 and you should be able to open Tensorboard environment in the browser
 
 
 ## For more information
